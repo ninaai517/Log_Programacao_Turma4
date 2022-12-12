@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var ano = 2016;
+
+    function pularLinha() {
+        document.write("<br><br>");
+    }
+
+    function exibaNaTela(frase) {
+        document.write(frase);
+        pularLinha();
+    }
+
+    exibaNaTela("Flávio tem " + (ano - 1977) + " anos");
+    exibaNaTela("Joaquim tem " + (ano - 1996) + " anos");
+
+    ano = 2017;
+    exibaNaTela("Barney tem " + (ano - 1976) + " anos");
+
+</script>
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    var idadeMediaQuandoTemFilhos = 28;
+    var anoAtual = 2016;
+    var quantidadeDeGeracoes = (anoAtual - 1500) / idadeMediaQuandoTemFilhos;
+    mostra(Math.round(quantidadeDeGeracoes));
+</script>

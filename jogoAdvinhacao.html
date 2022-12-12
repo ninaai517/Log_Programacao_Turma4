@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<h2>"Jogo de adivinhação em JAVAScript: "</h2>
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    var numAleatorio = 5;
+    var numUsuario = parseInt(prompt("Digite um nº de 1 a 10: "))
+
+    if (numUsuario == numAleatorio) {
+        mostra("Você acertou !")
+    }
+    if (numUsuario == 0 || numUsuario > 10) {
+        mostra(" Número " + numUsuario + " é inválido! Digite um número válido!");
+    } else {
+        mostra("Você errou !")
+    }
+
+</script>

@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var ano = 2016;
+
+    function pularLinha() {
+        document.write("<br><br>");
+    }
+
+    function exibaNaTela(frase) {
+        document.write(frase);
+        pularLinha();
+    }
+
+    var vitorias = parseInt(prompt("Entre com o nº de vitórias: "));
+    var empates = parseInt(prompt("Entre com o nº de empates: "));
+
+    var pontos = vitorias * 3 + empates;
+    exibaNaTela("Pontuação final: " + pontos);
+
+</script>
