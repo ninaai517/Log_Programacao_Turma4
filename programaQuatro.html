@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    //funcao desenha Circulo:
+    var raio = 20;
+    var aumentaRaio = 1;
+
+    function desenhaCirculo(x, y) {
+
+        if (raio > 40) {
+
+            aumentaRaio = -1;
+
+        } else if (raio < 15) {
+
+            aumentaRaio = 1;
+        }
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+        raio = raio + aumentaRaio;
+    }
+
+    //funcao para Limpar a tela: 
+    function limpaTela() {
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    //animacao: 
+    var x = 10;
+    var incremento = 1;
+    var raio = 20;
+
+    function atualizaTela() {
+        limpaTela();
+
+        if (x > 600) {
+            incremento = -1;
+        } else if (x < 0) {
+
+            incremento = 1;
+        }
+        desenhaCirculo(x, 200);
+        x = x + incremento;
+    }
+
+    //funcao que permite colocar um intervalo de tempo para algo ser executado:
+
+    setInterval(atualizaTela, 20);
+
+
+
+
+
+</script>
